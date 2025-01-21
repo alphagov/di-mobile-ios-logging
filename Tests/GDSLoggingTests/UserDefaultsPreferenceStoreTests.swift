@@ -1,4 +1,4 @@
-@testable import Logging
+@testable import GDSLogging
 import XCTest
 
 final class UserDefaultsPreferenceStoreTests: XCTestCase {

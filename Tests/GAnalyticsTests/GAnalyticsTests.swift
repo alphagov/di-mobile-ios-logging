@@ -1,5 +1,5 @@
 @testable import GAnalytics
-import Logging
+import GDSLogging
 import XCTest
 
 final class GAnalyticsTests: XCTestCase {

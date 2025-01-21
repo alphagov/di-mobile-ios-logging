@@ -23,7 +23,7 @@ To use this Logging package in a project using Swift Package Manager:
 ]),
 ```
 
-3. Add `import Logging`, `import GAnalytics`, `import HTTPLogging` and/or `import GDSAnalytics` into your source code where necessary.
+3. Add `import GDSLogging`, `import GAnalytics`, `import HTTPLogging` and/or `import GDSAnalytics` into your source code where necessary.
 
 ## Package description
 

@@ -23,7 +23,7 @@ To use Logging in a project using Swift Package Manager:
 ]),
 ```
 
-3. Add `import Logging` in your source code.
+3. Add `import GDSLogging` in your source code.
 
 ## Package description
 

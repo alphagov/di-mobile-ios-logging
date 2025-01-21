@@ -1,4 +1,4 @@
-import Logging
+import GDSLogging
 
 final class MockPreferenceStore: AnalyticsPreferenceStore {
     private(set) var subscribers: [AsyncStream<Bool>.Continuation] = []

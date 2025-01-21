@@ -1,5 +1,5 @@
 import Foundation
-import Logging
+import GDSLogging
 
 struct MockScreen: Equatable {
     let name: String

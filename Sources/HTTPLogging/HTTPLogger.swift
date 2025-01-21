@@ -1,5 +1,5 @@
 import Foundation
-import Logging
+import GDSLogging
 import Networking
 
 /// HTTPLogger

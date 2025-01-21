@@ -1,7 +1,7 @@
 import Firebase
 import FirebaseAnalytics
 import FirebaseCrashlytics
-import Logging
+import GDSLogging
 
 /// GAnalytics
 ///
