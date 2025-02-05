@@ -58,6 +58,9 @@ let package = Package(
                     dependencies: ["GAnalytics"]),
         
         .target(name: "GDSAnalytics",
+                dependencies: [
+                    "Logging",
+                    ],
                 exclude: ["README.md"]),
         .testTarget(name: "GDSAnalyticsTests",
                     dependencies: ["GDSAnalytics"])
