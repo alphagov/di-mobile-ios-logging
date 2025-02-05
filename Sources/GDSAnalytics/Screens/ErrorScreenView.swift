@@ -1,4 +1,5 @@
 import Foundation
+import Logging
 
 public struct ErrorScreenView<Screen: ScreenType>: ScreenViewProtocol, LoggableError {
     public let id: String?
@@ -51,5 +52,16 @@ public struct ErrorScreenView<Screen: ScreenType>: ScreenViewProtocol, LoggableE
         endpoint = error.endpoint
         statusCode = error.statusCode
         hash = error.hash
+    }
+}
+
+extension ErrorScreenView: LoggableScreenV2
+where Screen: Logging.ScreenType {
+    public var name: String {
+        title
+    }
+
+    public var type: Logging.ScreenType {
+        screen
     }
 }

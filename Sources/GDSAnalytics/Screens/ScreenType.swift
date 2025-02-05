@@ -1,4 +1,5 @@
 import Foundation
+import Logging
 
 public protocol ScreenViewProtocol {
     associatedtype Screen: ScreenType
@@ -28,5 +29,16 @@ public struct ScreenView<Screen: ScreenType>: ScreenViewProtocol {
         self.id = id
         self.screen = screen
         self.title = titleKey.englishString(variableKeys, bundle: bundle).formattedAsParameter
+    }
+}
+
+extension ScreenView: LoggableScreenV2
+where Screen: Logging.ScreenType {
+    public var name: String {
+        title
+    }
+
+    public var type: Logging.ScreenType {
+        screen
     }
 }
