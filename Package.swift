@@ -11,7 +11,8 @@ let package = Package(
         .library(name: "Logging", targets: ["Logging"]),
         .library(name: "HTTPLogging", targets: ["HTTPLogging"]),
         .library(name: "GAnalytics", targets: ["GAnalytics"]),
-        .library(name: "GDSAnalytics", targets: ["GDSAnalytics"])
+        .library(name: "GDSAnalytics", targets: ["GDSAnalytics"]),
+        .library(name: "AnalyticsBridge", targets: ["AnalyticsBridge"])
     ],
     dependencies: [
         .package(
@@ -63,6 +64,11 @@ let package = Package(
                     ],
                 exclude: ["README.md"]),
         .testTarget(name: "GDSAnalyticsTests",
-                    dependencies: ["GDSAnalytics"])
+                    dependencies: ["GDSAnalytics"]),
+        .target(name: "AnalyticsBridge",
+                dependencies: [
+                    "Logging",
+                    "GDSAnalytics"
+                ])
     ]
 )
